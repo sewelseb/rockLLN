@@ -118,8 +118,30 @@
 						}
 
 					$bdd->exec('INSERT INTO reponse_clients (titre, nom, prenom, presence_soiree, message, mail) VALUES(\'' .$titre. '\', \'' .$nom. '\', \'' .$prenom. '\', ' .$presence. ', \'' .$message. '\', \'' .$mail. '\')');
-
+					return $bdd->lastInsertId();
 				}
+			//retourne -1 il il n'y est pas encore, et l'id dans la bdd si non
+			public function verificationPresenceDansBDD($bdd)
+				{
+					$retour=-1;
+
+					$reqListeClients=$bdd->query('SELECT * FROM reponse_clients WHERE (nom=\''.addslashes($this->getNom()).'\' && nom=\''.addslashes($this->getPrenom()).'\')');
+					//var_dump($reqListeClients);
+					if (is_object($reqListeClients))
+						{
+							
+							while ($clientBdd=$reqListeClients->fetch())
+								{
+									//var_dump($clientBdd);
+									$retour=$clientBdd['id'];
+									
+								}
+						}
+					
+					return $retour;
+				}
+
+
 
 		}
 

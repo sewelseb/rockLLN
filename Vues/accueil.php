@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Ma Réponse</title>
+    <title>ROCK Louvain-la-Neuve</title>
     
 
     <!-- Bootstrap core CSS -->
@@ -68,6 +68,7 @@
 
 	
 	<!-- ========== HEADER SECTION ========== -->
+
 	<section id="home" name="home"></section>
 	<div id="headerwrap">
 		<div class="container">
@@ -77,6 +78,7 @@
 			<br>
 			<div class="row">
 				<h1>Rock Louvain la Neuve</h1>
+
 				<br>
 				<form method="POST" action="index.php">
 					<div class="row col-lg-12 ">
@@ -84,13 +86,48 @@
 							S'inscrire pour le rock du 29 avril 2015 et bénéficier de la réduction de 30%
 						</div>
 					</div>
+						<?php
+
+							if (isset($message) && $message=="ErreurDejaInscrit")
+								{
+									?>
+										<div class="alert alert-error alert-danger">  
+										  <a class="close" data-dismiss="alert">×</a>  
+										  <strong>Erreur!</strong>Vous êtes déja inscrit.  
+										</div>
+									<?php
+								}
+							else if (isset($message) && $message=="ErreurInscription") 
+								{
+									?>
+										<div class="alert alert-error alert-danger">  
+										  <a class="close" data-dismiss="alert">×</a>  
+										  <strong>Erreur!</strong>Une erreur est survenue lors de l'inscription.  
+										</div>
+									<?php
+								}
+							else if (isset($message) && $message=="inscriptionReussie") 
+								{
+									?>
+										<div class="alert alert-success">  
+										  <a class="close" data-dismiss="alert">×</a>  
+										  Inscription réussie<br/>
+										  Votre numero d'inscription est le <?php echo $client->getId(); ?>  
+										</div>
+									<?php
+								}
+
+						?>
+
+				    
+
 					<div class="row col-lg-12 col-lg-offset-4">
 						<div class="form-group col-lg-2 ">
-							<input type="text" class="form-control" id="nom"  name="nom" placeholder="nom">
+							<input type="text" class="form-control" id="nom"  name="nom" placeholder="nom" required>
 						</div>
 						<div class="form-group col-lg-2">
 							
-							<input type="text" class="form-control" id="prenom" name="prenom" placeholder="prénom">
+							<input type="text" class="form-control" id="prenom" name="prenom" placeholder="prénom" required>
 						</div>
 					</div>
 					
