@@ -89,7 +89,7 @@
 				$listeUsers=$bdd->query('SELECT * FROM admin WHERE (pseudo=\''.$_SESSION['pseudo'].'\')');
 				while ($user=$listeUsers->fetch())
 					{
-						echo $user['pseudo'];
+						//echo $user['pseudo'];
 						if ($user['clef']==$_SESSION['clef'])
 							{
 									
@@ -109,7 +109,7 @@
 						$client= new Client();
 						$client->hydratePlusId($clientBdd['id'], $clientBdd['titre'], $clientBdd['nom'], $clientBdd['prenom'], $clientBdd['presence_soiree'], $clientBdd['message'],$clientBdd['mail']);
 						$liste[$i]=$client;
-						echo 'truc';
+						//echo 'truc';
 						
 						$i++;
 					}

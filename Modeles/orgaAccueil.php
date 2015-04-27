@@ -6,7 +6,7 @@
 
 	$admin= new Admin();
 	$conecte=$admin->verificationConecte($bdd);
-	echo $conecte;
+	//echo $conecte;
 	if ($conecte==1)
 	{
 		$admin->hydrateListeObjClient($bdd);

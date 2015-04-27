@@ -16,11 +16,13 @@
 		<script src="Vues/js/skel.min.js"></script>
 		<script src="Vues/js/skel-panels.min.js"></script>
 		<script src="Vues/js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="Vues/css/orga/skel-noscript.css" />
-			<link rel="stylesheet" href="Vues/css/orga/style.css" />
-			<link rel="stylesheet" href="Vues/css/orga/style-wide.css" />
-		</noscript>
+		<!-- <noscript> -->
+
+			<link rel="stylesheet" type="text/css" href="Vues/css/orga/skel-noscript.css" />
+			<link rel="stylesheet" type="text/css" href="Vues/css/orga/style.css" />
+
+			<link rel="stylesheet" type="text/css" href="Vues/css/orga/style-wide.css" />
+		<!-- </noscript> -->
 		<!--[if lte IE 9]><link rel="stylesheet" href="Vues/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="Vues/css/ie8.css" /><![endif]-->
 	</head>
@@ -54,8 +56,7 @@
 							
 							-->
 							<ul>
-								<li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="fa fa-home">Réponses Positives (<?php echo $acceptation; ?>)</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="fa fa-th">Réponses Négatives (<?php echo $reffus; ?>)</span></a></li>
+								
 								<li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="fa fa-user">Toutes les réponses (<?php echo ($reffus+$acceptation); ?>)</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-panels-ignoreHref"><span class="fa fa-envelope">Contact</span></a></li>
 							</ul>
@@ -82,158 +83,10 @@
 			<div id="main">
 			
 				<!-- Intro -->
-					<section id="top" class="one">
-						<div class="container">
-
-							<a href="/orga/orga.php" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-
-							<header>
-								<h2 class="alt">Liste des réponses Positives (<?php echo $acceptation; ?>)</h2>
-							</header>
-							
-							<p>
-								<table border="1">
-									<tr style="border-bottom:1px solid">
-										<td>
-											<strong>Id</strong>
-										</td>
-										<td>
-											<strong>Titre</strong><br/>
-										</td>
-										<td>
-											<strong>Prenom</strong><br/>
-										</td>
-										<td>
-											<strong>Nom</strong><br/>
-										</td>
-										<td>
-											<strong>Message</strong><br/>
-										</td>
-										<td>
-											<strong>Mail</strong><br/>
-										</td>
-										<td>
-											<strong>Présance</strong><br/>
-										</td>
-										
-									</tr>
-									<?php
-										//var_dump($admin->getListeClients());
-										foreach ($admin->getListeClients() as $client) 
-											{
-												if ($client->getPresence()==1)
-													{
-														?>
-														<tr>
-															<td>
-																<?php echo ($client->getId()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getTitre()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getPrenom()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getNom()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getMessage()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getMail()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getPresence()); ?><br/>
-															</td>
-															
-														</tr>
-													<?php
-													}
-												
-											}
-
-									?>
-								</table>
-							
-							
-
-						</div>
-					</section>
+					
 					
 				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
 					
-							<header>
-								<h2 class="alt">Liste des réponses Négatives (<?php echo $reffus; ?>)</h2>
-							</header>
-							
-							<p>
-								<table border="1">
-									<tr style="border-bottom:1px solid">
-										<td>
-											<strong>Id</strong>
-										</td>
-										<td>
-											<strong>Titre</strong><br/>
-										</td>
-										<td>
-											<strong>Prenom</strong><br/>
-										</td>
-										<td>
-											<strong>Nom</strong><br/>
-										</td>
-										<td>
-											<strong>Message</strong><br/>
-										</td>
-										<td>
-											<strong>Mail</strong><br/>
-										</td>
-										<td>
-											<strong>Présance</strong><br/>
-										</td>
-										
-									</tr>
-									<?php
-										//var_dump($admin->getListeClients());
-										foreach ($admin->getListeClients() as $client) 
-											{
-												if ($client->getPresence()!=1)
-													{
-														?>
-														<tr>
-															<td>
-																<?php echo ($client->getId()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getTitre()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getPrenom()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getNom()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getMessage()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getMail()); ?><br/>
-															</td>
-															<td>
-																<?php echo ($client->getPresence()); ?><br/>
-															</td>
-															
-														</tr>
-													<?php
-													}
-												
-											}
-
-									?>
-								</table>
-							</p>
 
 				<!-- About Me -->
 					<section id="about" class="three">
@@ -249,16 +102,16 @@
 										<td>
 											<strong>Id</strong>
 										</td>
-										<td>
+										<!-- <td>
 											<strong>Titre</strong><br/>
-										</td>
+										</td> -->
 										<td>
 											<strong>Prenom</strong><br/>
 										</td>
 										<td>
 											<strong>Nom</strong><br/>
 										</td>
-										<td>
+										<!-- <td>
 											<strong>Message</strong><br/>
 										</td>
 										<td>
@@ -266,7 +119,7 @@
 										</td>
 										<td>
 											<strong>Présance</strong><br/>
-										</td>
+										</td> -->
 										
 									</tr>
 									<?php
@@ -279,16 +132,16 @@
 															<td>
 																<?php echo ($client->getId()); ?><br/>
 															</td>
-															<td>
+															<!-- <td>
 																<?php echo ($client->getTitre()); ?><br/>
-															</td>
+															</td> -->
 															<td>
 																<?php echo ($client->getPrenom()); ?><br/>
 															</td>
 															<td>
 																<?php echo ($client->getNom()); ?><br/>
 															</td>
-															<td>
+															<!-- <td>
 																<?php echo ($client->getMessage()); ?><br/>
 															</td>
 															<td>
@@ -296,7 +149,7 @@
 															</td>
 															<td>
 																<?php echo ($client->getPresence()); ?><br/>
-															</td>
+															</td> -->
 															
 														</tr>
 													<?php

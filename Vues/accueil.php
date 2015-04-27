@@ -53,10 +53,10 @@
 			<i class="icon-remove menu-close"></i>
 			<a href="#home" class="smoothScroll">Accueil</a>
 			<a href="#InfosPratiques" class="smoothScroll">Infos pratiques</a>
-			<a href="#portfolio" class="smoothScroll">Portfolio</a>
-			<a href="#contact" class="smoothScroll">Contact</a>
-			<a href="https://www.facebook.com/sebastien.de.beauffort"><i class="icon-facebook"></i></a>
-			<a href="https://twitter.com/SebdeBeauffort"><i class="icon-twitter"></i></a>
+			<!-- <a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<a href="#contact" class="smoothScroll">Contact</a> -->
+			<a href="https://www.facebook.com/pages/RockLLN/186283798068081?fref=ts"><i class="icon-facebook"></i></a>
+			<!-- <a href="https://twitter.com/SebdeBeauffort"><i class="icon-twitter"></i></a> -->
 			<a href="#"><i class="fa fa-github-square"></i></a>
 			
 		</div>
@@ -82,8 +82,10 @@
 				<br>
 				<form method="POST" action="index.php">
 					<div class="row col-lg-12 ">
-						<div>
-							S'inscrire pour le rock du 29 avril 2015 et bénéficier de la réduction de 30%
+						<div >
+<!-- 							<span style="color: white;">S'inscrire pour le rock du 29 avril 2015 et bénéficier de la réduction de 30%</span>
+ -->							<span style="color: white;">S'inscrire pour le rock du 29 avril 2015 et bénéficier de la réduction de 30%</span>
+
 						</div>
 					</div>
 						<?php
@@ -123,11 +125,11 @@
 
 					<div class="row col-lg-12 col-lg-offset-4">
 						<div class="form-group col-lg-2 ">
-							<input type="text" class="form-control" id="nom"  name="nom" placeholder="nom" required>
+							<input type="text" class="form-control" id="nom"  name="nom" placeholder="Nom" required>
 						</div>
 						<div class="form-group col-lg-2">
 							
-							<input type="text" class="form-control" id="prenom" name="prenom" placeholder="prénom" required>
+							<input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required>
 						</div>
 					</div>
 					
@@ -185,7 +187,7 @@
 	
 
 	<!-- ========== CAROUSEL SECTION ========== -->	
-	<section id="portfolio" name="portfolio"></section>
+	<!-- <section id="portfolio" name="portfolio"></section>
 	<div id="f">
 		<div class="container">
 			<div class="row centered">
@@ -193,9 +195,9 @@
 				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
 				
 				<div class="col-lg-6 col-lg-offset-3">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> -->
 						<!-- Wrapper for slides -->
-						<div class="carousel-inner">
+						<!-- <div class="carousel-inner">
 							<div class="item active centered">
 								<a href="https://www.qwerteach.com"><input type="button" class="btn btn-lg" value="Qwerteach.com" /></a>
 								<img class="img-responsive" src="Vues/assets/img/c1.png" alt="">
@@ -217,14 +219,14 @@
 						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 						</ol>
-					</div>
-				</div><!-- col-lg-8 -->
-			</div><!-- row -->
-		</div><!-- container -->
-	</div>	<!-- f -->
+					</div> -->
+				<!-- </div> --><!-- col-lg-8 -->
+			<!-- </div> --><!-- row -->
+		<!-- </div> --><!-- container -->
+	<!-- </div> -->	<!-- f -->
 
 	<!-- ========== CONTACT SECTION ========== -->
-	<section id="contact" name="contact"></section>
+	<!-- <section id="contact" name="contact"></section>
 	<div id="f">
 		<div class="container">
 			<div class="row">
@@ -240,7 +242,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	
 
